@@ -19,7 +19,7 @@ sbt test
 
 I only investigated to backend aspects of the problems.
 
-We maintain schannels in Redis, these channels contain a list of assets specific to each users for them to subscribe to consume.
+We maintain channels in Redis, these channels contain a list of assets specific to each users for them to subscribe to consume.
 
 We suppose users and assets collections are available through the already available stack with MySQL and Algolia.
 
@@ -32,6 +32,6 @@ So in the event when an asset is added, those tasks are performed:
 - update Algolia's index,
 - update Redis channels
 
-Clients of the user's Redis channel can be websockets, push notifications or a Facebook-like newsfeed. This way publish/subscribe mechanisms can be used to alert the relevant users of the event above.
+Clients of the user's Redis channel can be websockets, emails, push notifications or a Facebook-like newsfeed. This way publish/subscribe mechanisms can be used to alert the relevant users of the event above.
 
-The feed provides a generic interface for these types of notification.
+The Feed component provides a generic interface for these types of notification.
