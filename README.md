@@ -35,3 +35,7 @@ So in the event when an asset is added, those tasks are performed:
 Clients of the user's Redis channel can be websockets, emails, push notifications or a Facebook-like newsfeed. This way publish/subscribe mechanisms can be used to alert the relevant users of the event above.
 
 The Feed component provides a generic interface for these types of notification.
+
+## Going further
+
+- [Zappos Engineering - Creating a scalable websocket application in one hour in Scala](https://medium.com/zappos-engineering/creating-a-scalable-websocket-in-an-hour-f7fb217e3038)

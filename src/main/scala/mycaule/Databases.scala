@@ -28,6 +28,7 @@ object Databases {
 
   object Assets {
     // MySQL and Algolia calls here
+
     def getById(id: Asset.ID): Asset = {
       print(s"MySQL SELECT * FROM assets WHERE ID = $id;")
 
@@ -53,6 +54,22 @@ object Databases {
             Nil
           )
       }
+    }
+
+    def search(prefs: Preferences): List[Asset] = {
+      print(s"ALGOLIA search $prefs")
+
+      List(
+        Asset(
+          Asset.ID(99),
+          Asset.Name(s"Studio pas terrible"),
+          "rue Saint-Denis",
+          "paris",
+          Asset.Price(100000),
+          Asset.Surface(15),
+          Nil
+        )
+      )
     }
   }
 

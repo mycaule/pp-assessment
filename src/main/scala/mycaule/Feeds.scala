@@ -5,7 +5,7 @@ import Models._
 object Feeds {
   object NewsStatus extends Enumeration {
     type NewsStatus = Value
-    val Read, Unread = Value
+    val Sent, Delivered, Unread, Read = Value
   }
 
   case class News(

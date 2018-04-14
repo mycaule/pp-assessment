@@ -12,6 +12,8 @@ object Recommenders {
   }
 
   object Assets {
-    def recommendations(user: UserProfile): List[AssetReco] = ???
+    def recommendations(user: UserProfile): List[AssetReco] = {
+      Databases.Assets.search(user.preferences).map(asset => AssetReco(asset.id, asset.name, asset.price))
+    }
   }
 }
